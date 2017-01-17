@@ -1,6 +1,9 @@
 # Ignore .gradle directory
-.gradle/*
+.gradle
 
 # Ignore contents of build directory
 build/*
 !build/.gitkeep
+
+data/*
+!data/.gitkeep

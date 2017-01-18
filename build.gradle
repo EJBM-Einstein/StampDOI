@@ -8,16 +8,25 @@ repositories {
 }
 
 dependencies {
-  compile 'org.apache.pdfbox:pdfbox:2.0.4'
+  compile group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.4'
 }
 
 jar {
   baseName = 'StampDOI'
+  from {
+    configurations.compile.collect {
+      it.isDirectory() ? it : zipTree(it)
+    }
+
+    configurations.runtime.collect {
+      it.isDirectory() ? it : zipTree(it)
+    }
+  }
+
   manifest {
     attributes(
       'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-      'Main-Class': 'com.github.EJBM_Einstein.StampDOI.StampDOI',
-      'pdfbox': 'org.apache.pdfbox'
+      'Main-Class': 'com.github.EJBM_Einstein.StampDOI.StampDOI'
     )
   }
 }

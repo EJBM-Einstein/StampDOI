@@ -20,12 +20,20 @@ public class StampDOI {
     private static final float Y_POSITION = 11.0f;*/
 
     // --- Lower-right, normal, black ---
-    private static final PDFont DOI_FONT = PDType1Font.HELVETICA;
+    /*private static final PDFont DOI_FONT = PDType1Font.HELVETICA;
     private static final float DOI_FONT_SIZE = 8.0f;
     private static final Color DOI_FONT_COLOR = new Color(48, 48, 48);
 
     private static final float X_POSITION = 551.0f;
-    private static final float Y_POSITION = 11.0f;
+    private static final float Y_POSITION = 11.0f;*/
+
+    // --- Upper-right, bold, white ---
+    private static final PDFont DOI_FONT = PDType1Font.HELVETICA_BOLD;
+    private static final float DOI_FONT_SIZE = 8.0f;
+    private static final Color DOI_FONT_COLOR = new Color(255, 255, 255);
+
+    private static final float X_POSITION = 540.0f;
+    private static final float Y_POSITION = 744.0f;
 
     public static void main(String[] args) {
         if (args.length != 3) {

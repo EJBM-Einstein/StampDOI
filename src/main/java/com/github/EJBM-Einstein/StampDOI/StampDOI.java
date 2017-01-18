@@ -11,9 +11,18 @@ import org.apache.pdfbox.util.*;
 public class StampDOI {
     private static final String DOI_PREFIX = "10.23861.EJBM/";
 
-    private static final PDFont DOI_FONT = PDType1Font.HELVETICA_BOLD;
+    // --- Lower-right, bold, dark gray ---
+    /*private static final PDFont DOI_FONT = PDType1Font.HELVETICA_BOLD;
     private static final float DOI_FONT_SIZE = 8.0f;
     private static final Color DOI_FONT_COLOR = new Color(60, 60, 60);
+
+    private static final float X_POSITION = 551.0f;
+    private static final float Y_POSITION = 11.0f;*/
+
+    // --- Lower-right, normal, black ---
+    private static final PDFont DOI_FONT = PDType1Font.HELVETICA;
+    private static final float DOI_FONT_SIZE = 8.0f;
+    private static final Color DOI_FONT_COLOR = new Color(48, 48, 48);
 
     private static final float X_POSITION = 551.0f;
     private static final float Y_POSITION = 11.0f;
